@@ -1,0 +1,46 @@
+@import "tailwindcss";
+
+:root {
+  --ffm-navy: #0f2a44;
+  --ffm-orange: #e86f2a;
+  --ffm-gold: #f4b942;
+  --ffm-cream: #fdf5ec;
+  --background: #ffffff;
+  --foreground: #0f172a;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-ffm-navy: var(--ffm-navy);
+  --color-ffm-orange: var(--ffm-orange);
+  --color-ffm-gold: var(--ffm-gold);
+  --color-ffm-cream: var(--ffm-cream);
+  --font-sans: var(--font-inter), system-ui, sans-serif;
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+}
+
+.ffm-btn-primary {
+  @apply inline-flex items-center justify-center rounded-full bg-ffm-orange text-white font-semibold px-6 py-3 shadow-sm hover:brightness-105 transition;
+}
+
+.ffm-btn-outline {
+  @apply inline-flex items-center justify-center rounded-full border border-white/40 text-white font-semibold px-6 py-3 hover:bg-white/10 transition;
+}
+
+.quote-modal-panel {
+  background: #1a4d32;
+  color: var(--ffm-cream);
+}
+
+.quote-input {
+  @apply w-full rounded-xl border border-white/30 bg-white/10 px-4 py-3 text-white placeholder:text-white/50 outline-none focus:ring-2 focus:ring-ffm-gold/50;
+}
+
+.portal-input {
+  @apply w-full rounded-xl border border-slate-200 px-4 py-3 outline-none focus:ring-2 focus:ring-ffm-orange/30 focus:border-ffm-orange;
+}
